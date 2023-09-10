@@ -1,0 +1,61 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: $fontMain;
+  font-size: $sizeFont-basic;
+  height: 100%;
+}
+
+h1 {
+  font-size: $sizeFont-h1;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: $sizeFont-h2;
+}
+
+h2 {
+}
+
+a {
+  font-size: $sizeFont-basic;
+  color: $color3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.progress-bar {
+  background: $colorProgresBar;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10px;
+  z-index: 9999;
+}
+
+.container {
+  display: flex;
+}
+
+.sections {
+  margin-left: 30%;
+  width: 70%;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $sizeFont-main;
+  border-bottom: 1px solid #ccc;
+}
