@@ -20,6 +20,12 @@
   }
 }
 
+@mixin tablet2() {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media (max-width: 750px) {
     @content;

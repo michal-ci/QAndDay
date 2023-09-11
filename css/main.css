@@ -2,6 +2,7 @@
   1. Use a more-intuitive box-sizing model.
 */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
 *,
 *::before,
 *::after {
@@ -69,6 +70,10 @@ h6 {
   isolation: isolate;
 }
 
+.material-symbols-outlined {
+  color: #fff;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -89,6 +94,11 @@ body {
 h1 {
   font-size: 2.2rem;
   font-weight: 300;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -117,10 +127,13 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
-
-.sections {
-  margin-left: 30%;
-  width: 70%;
+@media (max-width: 750px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .section {
@@ -154,6 +167,12 @@ a {
           flex-direction: column;
   z-index: 3;
 }
+@media (max-width: 750px) {
+  .floating-nav {
+    position: relative;
+    width: 100%;
+  }
+}
 .floating-nav__logoGazeta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,7 +200,23 @@ a {
 }
 .floating-nav__content img {
   width: 100%;
-  max-height: 459px;
+  max-height: 450px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 1280px) {
+  .floating-nav__content img {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .floating-nav__content img {
+    width: 60%;
+  }
+}
+.floating-nav__logSerwice {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .floating-nav__footer {
   display: -webkit-box;
@@ -218,6 +253,12 @@ a {
   width: 70%;
   font-size: 16px;
 }
+@media (max-width: 750px) {
+  .sections {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
 .sections img {
   width: 100%;
   height: 100%;
@@ -238,6 +279,11 @@ a {
   margin: auto;
   padding: 80px;
 }
+@media (max-width: 750px) {
+  .sections__columnTwo {
+    padding: 20px;
+  }
+}
 .sections__artWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,12 +293,26 @@ a {
           justify-content: space-between;
   gap: 20px;
 }
+@media (max-width: 750px) {
+  .sections__artWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .sections__conetntBg {
   position: absolute;
   padding: 80px;
   padding-top: 450px;
   color: #ffffff;
   width: 50%;
+}
+@media (max-width: 750px) {
+  .sections__conetntBg {
+    width: 100%;
+    padding: 20px;
+  }
 }
 .sections__imgArt {
   -ms-flex-negative: 0;
@@ -261,6 +321,11 @@ a {
   height: 360px;
   display: block;
   font-size: 10px;
+}
+@media (max-width: 750px) {
+  .sections__imgArt {
+    width: 100%;
+  }
 }
 .sections__column {
   padding: 80px;
@@ -275,6 +340,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 750px) {
+  .sections__column {
+    padding: 20px;
+  }
+}
 .sections__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,6 +355,24 @@ a {
           flex-direction: column;
   font-size: x-small;
   font-size: 10px;
+}
+.sections ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  gap: 15px;
+}
+@media (max-width: 480px) {
+  .sections ul {
+    gap: 0px;
+  }
 }
 .sections__footerLink {
   display: -webkit-box;
@@ -299,18 +387,13 @@ a {
   margin-top: 10px;
   font-weight: 700;
 }
-.sections ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 10px;
-  gap: 15px;
+@media (max-width: 750px) {
+  .sections__footerLink {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .sections__ads {
   max-width: 1170px;
@@ -328,10 +411,28 @@ a {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
 }
+.glide__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1px;
+}
 .glide__arrow {
   background-color: #4298fb;
   border: 0;
   width: 50px;
   height: 50px;
-  gap: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.glide__arrow:hover {
+  background-color: #71019d;
 }

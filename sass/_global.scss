@@ -17,6 +17,10 @@ body {
 h1 {
   font-size: $sizeFont-h1;
   font-weight: 300;
+
+  @include mobile {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -44,12 +48,16 @@ a {
 
 .container {
   display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
-.sections {
-  margin-left: 30%;
-  width: 70%;
-}
+// .sections {
+//   margin-left: 30%;
+//   width: 70%;
+// }
 
 .section {
   height: 100vh;

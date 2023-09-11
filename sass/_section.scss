@@ -3,6 +3,11 @@
   width: 70%;
   font-size: $sizeFont-main;
 
+  @include tablet {
+    width: 100%;
+    margin-left: 0px;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -28,12 +33,20 @@
     flex-direction: column;
     margin: auto;
     padding: 80px;
+
+    @include tablet {
+      padding: 20px;
+    }
   }
 
   &__artWrapper {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__conetntBg {
@@ -42,6 +55,11 @@
     padding-top: 450px;
     color: $color1;
     width: 50%;
+
+    @include tablet {
+      width: 100%;
+      padding: 20px;
+    }
   }
 
   &__imgArt {
@@ -50,6 +68,10 @@
     height: 360px;
     display: block;
     font-size: $sizeFont-basic;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__column {
@@ -57,6 +79,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+      padding: 20px;
+    }
   }
 
   &__footer {
@@ -66,20 +92,28 @@
     font-size: $sizeFont-basic;
   }
 
-  &__footerLink {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    font-weight: 700;
-  }
-
   ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: $sizeFont-basic;
     gap: 15px;
+
+    @include mobile {
+      gap: 0px;
+    }
+  }
+
+  &__footerLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: 700;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__ads {
