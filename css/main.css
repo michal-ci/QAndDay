@@ -85,6 +85,11 @@ li {
   list-style: none;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 10px;
@@ -306,7 +311,6 @@ a {
   padding: 80px;
   padding-top: 450px;
   color: #ffffff;
-  width: 50%;
 }
 @media (max-width: 750px) {
   .sections__conetntBg {
@@ -435,4 +439,48 @@ a {
 }
 .glide__arrow:hover {
   background-color: #71019d;
+}
+
+.bullet-nav {
+  list-style: none;
+  position: fixed;
+  height: 105px;
+  right: 0.9vw;
+  top: 50%;
+  z-index: 998;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (max-width: 480px) {
+  .bullet-nav {
+    display: none;
+  }
+}
+.bullet-nav__item {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.bullet-nav__link {
+  border: 1px solid #c0ddfd;
+  background-color: #c0ddfd;
+  display: block;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.bullet-nav__link:not(.active):hover {
+  border: 1px solid #4298fb;
+  background-color: #4298fb;
+}
+.bullet-nav__link.active {
+  border: 2px solid #71019d;
+  background-color: #71019d;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }

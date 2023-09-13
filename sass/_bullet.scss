@@ -1,0 +1,42 @@
+.bullet-nav {
+  list-style: none;
+  position: fixed;
+  height: 105px;
+  right: 0.9vw;
+  top: 50%;
+  z-index: 998;
+  transform: translate(-50%, -50%);
+
+  @include mobile {
+    display: none;
+  }
+
+  &__item {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  &__link {
+    border: 1px solid $color5;
+    background-color: $color5;
+    display: block;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    backface-visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  &__link:not(.active):hover {
+    border: 1px solid $color3;
+    background-color: $color3;
+  }
+
+  &__link.active {
+    border: 2px solid $color4;
+    background-color: $color4;
+    transform: scale(1.1);
+  }
+}
